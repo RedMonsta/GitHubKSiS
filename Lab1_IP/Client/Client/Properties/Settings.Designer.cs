@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab1_IP.Properties
+namespace Client.Properties
 {
 
 
