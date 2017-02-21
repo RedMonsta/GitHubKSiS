@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConnect = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
             this.lblData = new System.Windows.Forms.Label();
+            this.tmrTime = new System.Windows.Forms.Timer(this.components);
+            this.btnConnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnConnect
-            // 
-            this.btnConnect.Location = new System.Drawing.Point(71, 174);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(127, 47);
-            this.btnConnect.TabIndex = 0;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = true;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // lblData
             // 
@@ -51,24 +43,39 @@
             this.lblData.Size = new System.Drawing.Size(0, 24);
             this.lblData.TabIndex = 1;
             // 
+            // tmrTime
+            // 
+            this.tmrTime.Interval = 10;
+            this.tmrTime.Tick += new System.EventHandler(this.tmrTime_Tick);
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(89, 163);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(104, 37);
+            this.btnConnect.TabIndex = 2;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.lblData);
             this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.lblData);
             this.Name = "Client";
-            this.Text = "Form1";
+            this.Text = "Client";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Timer tmrTime;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 

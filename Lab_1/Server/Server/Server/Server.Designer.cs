@@ -32,11 +32,12 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.tmtTime = new System.Windows.Forms.Timer(this.components);
+            this.btnStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(85, 156);
+            this.btnStart.Location = new System.Drawing.Point(48, 166);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(120, 43);
             this.btnStart.TabIndex = 0;
@@ -57,15 +58,26 @@
             // 
             this.tmtTime.Tick += new System.EventHandler(this.tmtTime_Tick);
             // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(209, 168);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(49, 40);
+            this.btnStop.TabIndex = 2;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(290, 260);
+            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnStart);
             this.Name = "Server";
-            this.Text = "Form1";
+            this.Text = "Server";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -76,6 +88,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer tmtTime;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 

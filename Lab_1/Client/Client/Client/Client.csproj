@@ -53,6 +53,7 @@
       <DependentUpon>Client.cs</DependentUpon>
     </Compile>
     <Compile Include="MainUnit.cs" />
+    <Compile Include="MyClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
